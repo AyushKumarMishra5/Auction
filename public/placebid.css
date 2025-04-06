@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f6f8f9;
+}
+
+.layout {
+    display: flex;
+}
+
+.main-content {
+    margin-left: 250px; /* default when sidebar is open */
+    padding: 2rem;
+    flex-grow: 1;
+    transition: margin-left 0.3s ease;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.sidebar.collapsed ~ .layout .main-content {
+    margin-left: 70px; /* when sidebar is collapsed */
+}
+
+/* Header */
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* Table styles */
+.bids-section {
+    overflow-x: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.bids-section::-webkit-scrollbar {
+    height: 8px;
+}
+
+.bids-section::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.bids-table {
+    min-width: 700px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bids-table th,
+.bids-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.bids-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.bids-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .bids-table th,
+    .bids-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

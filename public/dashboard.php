@@ -88,8 +88,54 @@ $items = [
                 </div>
             <?php endforeach; ?>
         </div>
+        <div id="itemModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img id="modalImage" src="" alt="">
+                <h3 id="modalTitle"></h3>
+                <p id="modalPrice"></p>
+                <p id="modalDesc"></p>
+            </div>
+        </div>
+
     </div>
 
+    <script>
+        const modal = document.getElementById("itemModal");
+        const modalImage = document.getElementById("modalImage");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalPrice = document.getElementById("modalPrice");
+        const modalDesc = document.getElementById("modalDesc");
+        const closeBtn = document.querySelector(".close");
+
+        document.querySelectorAll(".card button").forEach((button) => {
+            button.addEventListener("click", () => {
+                const card = button.parentElement;
+                const title = card.querySelector("h3").textContent;
+                const imageSrc = card.querySelector("img").src;
+                const priceText = card.querySelector("p").textContent;
+                const descText = card.querySelectorAll("p")[1].textContent;
+
+                modalTitle.textContent = title;
+                modalImage.src = imageSrc;
+                modalImage.alt = title;
+                modalPrice.textContent = priceText;
+                modalDesc.textContent = descText;
+
+                modal.style.display = "block";
+            });
+        });
+
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 

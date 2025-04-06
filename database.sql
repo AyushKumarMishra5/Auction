@@ -1,8 +1,6 @@
--- Create database
 CREATE DATABASE IF NOT EXISTS auction_db;
 USE auction_db;
 
--- Users table
 CREATE TABLE users (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
@@ -10,8 +8,6 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
--- Items table
 CREATE TABLE items (
     id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(200) NOT NULL,
@@ -28,7 +24,6 @@ CREATE TABLE items (
     FOREIGN KEY (highest_bidder_id) REFERENCES users(id)
 );
 
--- Bids table
 CREATE TABLE bids (
     id INT PRIMARY KEY AUTO_INCREMENT,
     item_id INT NOT NULL,

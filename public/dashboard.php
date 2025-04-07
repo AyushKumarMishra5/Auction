@@ -88,6 +88,7 @@ $items = [
                 </div>
             <?php endforeach; ?>
         </div>
+    </div>
         <div id="itemModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
@@ -97,8 +98,6 @@ $items = [
                 <p id="modalDesc"></p>
             </div>
         </div>
-
-    </div>
 
     <script>
         const modal = document.getElementById("itemModal");

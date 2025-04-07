@@ -22,12 +22,12 @@ body {
     margin-left: 80px;
     padding: 2rem;
     transition: all 0.3s ease;
-    width: calc(100% - 80px);
+    width: calc(100% - 75px);
 }
 
 .sidebar:hover~.main-content {
-    margin-left: 340px;
-    width: calc(100% - 340px);
+    margin-left: 250px;
+    width: calc(100% - 250px);
 }
 
 

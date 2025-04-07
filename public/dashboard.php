@@ -1,5 +1,4 @@
 <?php
-include 'navbar.php';
 $items = [
     [
         'name' => 'Antique Vase',
@@ -74,6 +73,7 @@ $items = [
 </head>
 
 <body>
+    <?php include 'navbar.php'; ?>
     <div class="main-content">
         <h2 style="text-align:center; margin-bottom: 2rem;">Bidding Items</h2>
 
@@ -89,15 +89,15 @@ $items = [
             <?php endforeach; ?>
         </div>
     </div>
-        <div id="itemModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <img id="modalImage" src="" alt="">
-                <h3 id="modalTitle"></h3>
-                <p id="modalPrice"></p>
-                <p id="modalDesc"></p>
-            </div>
+    <div id="itemModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <h3 id="modalTitle"></h3>
+            <p id="modalPrice"></p>
+            <p id="modalDesc"></p>
         </div>
+    </div>
 
     <script>
         const modal = document.getElementById("itemModal");
@@ -134,6 +134,19 @@ $items = [
                 modal.style.display = "none";
             }
         }
+
+        const sidebar = document.querySelector('.sidebar');
+        const mainContent = document.querySelector('.main-content');
+
+        sidebar.addEventListener('mouseenter', () => {
+            mainContent.style.marginLeft = '250px';
+            mainContent.style.width = 'calc(100% - 250px)';
+        });
+
+        sidebar.addEventListener('mouseleave', () => {
+            mainContent.style.marginLeft = '75px';
+            mainContent.style.width = 'calc(100% - 75px)';
+        });
     </script>
 
 </body>

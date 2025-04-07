@@ -14,22 +14,32 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
-    z-index: 1000;
+    height: 100%;
+    width: 75px; /* Default width */
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+    background: #18181B;
+    padding: 25px 20px;
+    transition: width 0.4s ease; /* Smooth transition for width */
+}
+
+.sidebar:hover {
+    width: 250px; /* Expanded width */
 }
 
 .main-content {
-    margin-left: 80px;
+    margin-left: 75px; /* Default margin to match sidebar's default width */
     padding: 2rem;
-    transition: all 0.3s ease;
-    width: calc(100% - 75px);
+    transition: margin-left 0.4s ease; /* Smooth transition for margin */
+    width: calc(100% - 75px); /* Default width */
 }
 
-.sidebar:hover~.main-content {
-    margin-left: 250px;
-    width: calc(100% - 250px);
+/* Adjust margin when sidebar is hovered */
+.sidebar:hover ~ .main-content {
+    margin-left: 250px; /* Adjusted margin for expanded sidebar */
+    width: calc(100% - 250px); /* Adjusted width */
 }
-
 
 .grid {
     display: flex;
@@ -38,6 +48,7 @@ body {
     justify-content: center;
 }
 
+/* Card styles */
 .card {
     background-color: #ffffff;
     border-radius: 10px;
@@ -53,7 +64,6 @@ body {
     max-width: 300px;
     box-sizing: border-box;
 }
-
 
 .card:hover {
     transform: translateY(-5px);
@@ -94,6 +104,8 @@ body {
 .card button:hover {
     background-color: #218838;
 }
+
+/* Modal styles */
 .modal {
     display: none;
     position: fixed;

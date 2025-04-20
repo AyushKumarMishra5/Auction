@@ -1,0 +1,93 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-container:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #5C6BC0;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    background-color: #5C6BC0;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #3949AB;
+}
+
+.form-footer {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.form-footer a {
+    color: #5C6BC0;
+    text-decoration: none;
+}

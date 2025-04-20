@@ -32,7 +32,6 @@
   <script>
     const storedBids = JSON.parse(localStorage.getItem("placedBids")) || [];
     const tbody = document.getElementById("bidsBody");
-
     if (storedBids.length === 0) {
       const row = document.createElement("tr");
       row.innerHTML = `<td colspan="6" style="text-align:center;">No bids placed yet.</td>`;

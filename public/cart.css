@@ -1,0 +1,136 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f7f7f7;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  .cart-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .cart-item {
+    display: flex;
+    gap: 20px;
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    align-items: flex-start;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .cart-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .cart-details {
+    flex: 1;
+    position: relative;
+  }
+  
+  .cart-details h3 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .cart-details p {
+    margin: 8px 0;
+    color: #555;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .quantity-controls button {
+    padding: 5px 12px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .quantity-controls input {
+    width: 40px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .cart-summary {
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: right;
+  }
+  
+  .cart-summary h3 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .empty-cart {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+  }
+  
+  .warning {
+    color: crimson;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .delete-icon {
+    font-size: 18px;
+    color: crimson;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.3s ease;
+  }
+  
+  .delete-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .checkout-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .toastify {
+    background-color: #ffbdb8; /* default for error */
+  }
+  

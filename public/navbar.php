@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sidebar Menu</title>
   <link rel="stylesheet" href="navbar.css">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
+
 <body>
   <div class="container">
     <aside class="sidebar">
@@ -44,36 +46,43 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="reverse.php">
             <span class="material-symbols-outlined"> compare_arrows </span>
             Reverse Auction
           </a>
         </li>
+        <li>
+          <a href="cart.php">
+            <span class="material-symbols-outlined"> shopping_cart </span>
+            Cart
+          </a>
+        </li>
+
 
         <h4>
           <span>Account</span>
           <div class="divider"></div>
         </h4>
         <li>
-          <a href="#">
+          <a href="profile.php">
             <span class="material-symbols-outlined"> account_circle </span>
             Profile
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="settings.php">
             <span class="material-symbols-outlined"> settings </span>
             Settings
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="support.php">
             <span class="material-symbols-outlined"> help </span>
             Support
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="Logout.php">
             <span class="material-symbols-outlined"> logout </span>
             Logout
           </a>
@@ -88,4 +97,5 @@
     </aside>
   </div>
 </body>
+
 </html>

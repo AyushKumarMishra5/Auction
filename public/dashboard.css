@@ -15,30 +15,30 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    width: 75px; /* Default width */
+    width: 75px;
     display: flex;
     overflow-x: hidden;
     flex-direction: column;
     background: #18181B;
     padding: 25px 20px;
-    transition: width 0.4s ease; /* Smooth transition for width */
+    transition: width 0.4s ease; 
 }
 
 .sidebar:hover {
-    width: 250px; /* Expanded width */
+    width: 250px; 
 }
 
 .main-content {
-    margin-left: 75px; /* Default margin to match sidebar's default width */
+    margin-left: 75px; 
     padding: 2rem;
-    transition: margin-left 0.4s ease; /* Smooth transition for margin */
-    width: calc(100% - 75px); /* Default width */
+    transition: margin-left 0.4s ease;
+    width: calc(100% - 75px); 
 }
 
-/* Adjust margin when sidebar is hovered */
+
 .sidebar:hover ~ .main-content {
-    margin-left: 250px; /* Adjusted margin for expanded sidebar */
-    width: calc(100% - 250px); /* Adjusted width */
+    margin-left: 250px;
+    width: calc(100% - 250px); 
 }
 
 .grid {
